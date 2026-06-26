@@ -386,7 +386,7 @@ std::unique_ptr<RadioInterface> initLoRa()
     RadioLibHAL = loraHal;
 #else // HW_SPI1_DEVICE
     #ifdef USE_BB_HAL
-      static BBTxRXHal bbHal(19, 20, 18, 23, 21);
+      static BBTxRXHal bbHal(19, 20, 18, SX126X_CS, SX126X_BUSY);
       LockingArduinoHal *loraHal = &bbHal;
     #else
       LockingArduinoHal *loraHal = new LockingArduinoHal(SPI, loraSpiSettings);

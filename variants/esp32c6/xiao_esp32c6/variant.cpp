@@ -10,14 +10,15 @@
 #include <Arduino.h>
 #include <SPI.h>
 #include "esp_task_wdt.h"
+#include "mesh/NodeDB.h"
 
-// Nostri pin SX1262
-#define SX_NSS  23
-#define SX_SCK  19
-#define SX_MOSI 18
-#define SX_MISO 20
-#define SX_RST  2
-#define SX_BUSY 21
+// SX1262 pin assignments (Wio-SX1262 for XIAO standalone schematic)
+#define SX_NSS  22    // D4 = GPIO22 (SX126X_CS)
+#define SX_SCK  19    // D8
+#define SX_MOSI 18    // D10
+#define SX_MISO 20    // D9
+#define SX_RST  2     // D2 = GPIO2 (SX126X_RESET)
+#define SX_BUSY 21    // D3 = GPIO21 (SX126X_BUSY)
 
 void waitBusy() {
   int t = 0;

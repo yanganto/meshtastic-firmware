@@ -3,7 +3,7 @@
   Bypasses hardware SPI completely. Extends LockingArduinoHal so it
   can be passed directly to initLoRa() / SX1262Interface constructor.
 
-  Pinout: SCK=19(D8), MISO=20(D9), MOSI=18(D10), NSS=23(D5), BUSY=21(D3)
+  Pinout: SCK=19(D8), MISO=20(D9), MOSI=18(D10), NSS=22(D4), BUSY=21(D3)
 */
 #pragma once
 #include <RadioLib.h>

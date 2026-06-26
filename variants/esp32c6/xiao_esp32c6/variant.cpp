@@ -72,6 +72,11 @@ void earlyInitVariant() {
   Serial.println("earlyInit: WDT+preReset+SPI@1MHz(noHWSS) done");
 }
 
+void variantDefaultConfig()
+{
+    config.lora.region = meshtastic_Config_LoRaConfig_RegionCode_TW;
+}
+
 void lateInitVariant() {
   Serial.println("lateInit: done");
 }
